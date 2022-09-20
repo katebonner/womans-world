@@ -212,12 +212,22 @@ a {
 .post-container {
   border-radius: 15px;
   width: 45%;
-  margin: 0;
-  padding:0px;
+  margin: 2%;
+  padding:2%;
   overflow: hidden;
   flex-wrap: wrap;
 }
 
 .work-img {
   height: 400px;
+}
+
+.quotes {
+  font-size: 3em;
+  color: rgb(255, 105, 150);
+  padding: 2%;
+}
+
+.justify {
+  text-align: justify;
 }
