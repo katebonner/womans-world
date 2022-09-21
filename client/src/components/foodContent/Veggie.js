@@ -19,7 +19,7 @@ function Veggie() {
         setVeggie(JSON.parse(check));
     }else{
         const api = await fetch(
-            `https://api.spoonacular.com/recipes/random?apiKey=$(process.env.FOOD_API_KEY)&number=6`
+            `https://api.spoonacular.com/recipes/random?apiKey=$(process.env.FOOD_API_KEY)&number=9&tags=vegetarian`
             );
             const data = await api.json();
             
