@@ -1,5 +1,8 @@
 import React from 'react';
 import Auth from '../utils/auth';
+import Veggie from '../components/foodContent/Veggie';
+import Popular from '../components/foodContent/Popular'
+
 
 
 const Food = () => {
