@@ -1,8 +1,8 @@
 import React from 'react';
-import Auth from '../utils/auth';
+import Auth from '../../utils/auth';
 
 
-const Style = () => {
+const Food = () => {
 
   const loggedIn = Auth.loggedIn();
 
@@ -11,15 +11,15 @@ const Style = () => {
       <div>
         {loggedIn && (
           <div>
-            <h1 class='text'> logged in and viewing style content</h1>
+            <h1 class='text'> logged in and viewing food content</h1>
           </div>
         )}
         {!loggedIn && (
-          <h1 class='text'> logged out and viewing style content</h1>
+          <h1 class='text'> logged out and viewing food content</h1>
         )}
       </div>
     </main>
   );
 };
 
-export default Style;
+export default Food;

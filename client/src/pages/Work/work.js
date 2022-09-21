@@ -1,5 +1,5 @@
 import React from 'react';
-import Auth from '../utils/auth';
+import Auth from '../../utils/auth';
 
 
 
@@ -37,7 +37,7 @@ const Work = () => {
           <div class='work-container'>
             {posts.map((post)=> (
               <div class='post-container'>
-                <img src={require(`../assets/${post.image}.png`).default} alt='post' class='work-img'/>
+                <img src={require(`../../assets/${post.image}.png`).default} alt='post' class='work-img'/>
                 <h2>{post.title}</h2>
                 <h4>{post.description}</h4>
               </div>
@@ -50,7 +50,7 @@ const Work = () => {
           <div class='work-container'>
             {posts.map((post)=> (
               <div class='post-container'>
-              <img src={require(`../assets/${post.image}.png`).default} alt='post' class='work-img'/>
+              <img src={require(`../../assets/${post.image}.png`).default} alt='post' class='work-img'/>
               <h2>{post.title}</h2>
               <h4>{post.description}</h4>
             </div>

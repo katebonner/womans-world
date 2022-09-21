@@ -15,12 +15,12 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import NoMatch from './pages/NoMatch';
 import Signup from './pages/Signup';
-import Health from './pages/health';
-import Food from './pages/food';
-import Media from './pages/media';
-import Style from './pages/style';
-import Work from './pages/work';
-import NightLife from './pages/nightlife';
+import Health from './pages/Health/health';
+import Food from './pages/Food/food';
+import Media from './pages/Media/media';
+import Style from './pages/Style/style';
+import Work from './pages/Work/work';
+import NightLife from './pages/Nightlife/nightlife';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
