@@ -2,52 +2,53 @@ import { useEffect, useState } from "react";
 import styled from "styled-components";
 import {Splide, SplideSlide} from "@splidejs/react-splide";
 import '@splidejs/splide/dist/css/splide.min.css';
+import './food.css'
 
-function Popular() {
+function Veggie() {
 
-    const [popular, setPopular] =useState([]);
+    const [veggie, setVeggie] =useState([]);
 
     useEffect(() => {
-        getPopular();
+        getVeggie();
     },[]);
 
-    const getPopular = async () => {
+    const getVeggie = async () => {
 
-    const check = localStorage.getItem('popular');
+    const check = localStorage.getItem('veggie');
     
     if(check){
-        setPopular(JSON.parse(check));
+        setVeggie(JSON.parse(check));
     }else{
         const api = await fetch(
-            `https://api.spoonacular.com/recipes/random?apiKey=$(process.env.FOOD_API_KEY)&number=6`
+            `https://api.spoonacular.com/recipes/random?apiKey=$(process.env.FOOD_API_KEY)&number=9&tags=vegetarian`
             );
             const data = await api.json();
             
-            localStorage.setItem("popular", JSON.stringify(data.recipes));
-            setPopular(data.recipes)
+            localStorage.setItem("Veggie", JSON.stringify(data.recipes));
+            setVeggie(data.recipes)
             console.log(data.recipe)
     }
     };
 
     return (
     <div> 
-                <Wrapper>
-                    <h3>Popular Picks</h3>
+                <Wrapper className="veggie_card_recipe">
+                    <h3>Vegetarian Picks</h3>
 
                     <Splide options={{
-                        perPage: 4,
+                        perPage: 3,
                         arrows: false,
                         pagination:false,
                         drag: `free`,
                         gap: "5rem", 
                     }}
                     >
-                    {popular.map((recipe) => {
+                    {veggie.map((recipe) => {
                         return(
                             <SplideSlide key={recipe.id}>
                         <Card>
                             <p>{recipe.title}</p>
-                            <img src={recipe.image} alt={recipe.title} />
+                            <img src={recipe.image} alt="{recipe.title}" />
                             <Gradient />
                         </Card>
                         </SplideSlide>
@@ -102,4 +103,4 @@ const Gradient = styled.div`
     background: linear-gradient(180deg,#FFE0B2,#fcef7bc8)
 `;
 
-export default Popular;
+export default Veggie;
