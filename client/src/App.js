@@ -15,7 +15,7 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import NoMatch from './pages/NoMatch';
 import Signup from './pages/Signup';
-import Health from './pages/Health/health';
+import Health from './pages/Health/Health';
 import Food from './pages/Food/food';
 import Media from './pages/Media/media';
 import Style from './pages/Style/style';

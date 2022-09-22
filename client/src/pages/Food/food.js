@@ -2,7 +2,6 @@ import React from 'react';
 import Auth from '../../utils/auth';
 import Veggie from './foodContent/Veggie';
 import Popular from './foodContent/Popular';
-// import Category from './foodContent/Category'
 
 const Food = () => {
 
