@@ -53,7 +53,7 @@ export default function Beauty() {
     }
 
   };
-  
+
   return (
     <div className='container' style={{backgroundImage:'linear-gradient(180deg,#FFE0B2,#d37bfcea)',width:'100vw'}}>
       <header style={{backgroundColor:"#d37bfcea",height:"200px",display:'flex',alignItems:"center",justifyContent:"center",width:'60%',margin:'5em'}}>
@@ -142,8 +142,8 @@ export default function Beauty() {
           </Card>
         </Col>
       </Row >
-      <Row fluid="ture">
-                  {searchedMakeup.map((makeup) => {
+      {searchedMakeup.length > 0 ? (<Row fluid="ture">
+      {searchedMakeup.map((makeup) => {
                     return (
                       <Col key={makeup.id} md={4}>
                       <Card style={{ backgroundColor: 'transparent',border:'solid 5px',margin:'5em',display:'flex',justifyContent: 'center',alignItems: 'center'}}>
@@ -167,7 +167,7 @@ export default function Beauty() {
                       </Col>
                     )
                   })}
-                </Row>
+                </Row>): <Row fluid="ture"><h3 style={{margin:'2em',textAlign:"center"}}>Sorry products missing, please try another one. We have lipstick, eyeshadow etc. :P </h3></Row>}
 
     </div>
   );

@@ -53,8 +53,6 @@ const Style = () => {
                 alt="Card cap"
                 style={{ width:'500px'}}
               />
-              <NavTabs currentPage={currentPage} handlePageChange={handlePageChange} /> 
-              {renderPage()}
           </div>
           </>
         )}
