@@ -1,8 +1,6 @@
 import React from 'react';
 import Auth from '../../utils/auth';
 
-
-
 const Work = () => {
 
   const loggedIn = Auth.loggedIn();
@@ -58,8 +56,8 @@ const Work = () => {
           <div class='work-container'>
             {posts.map((post)=> (
               <div class='post-container'>
-              <a href={post.url} target="_blank" ><img src={require(`../../assets/${post.image}.png`).default} alt='post' class='work-img'/></a>
-              <h2><a href={post.url} target="_blank">{post.title}</a></h2>
+              <a href={post.url} target="_blank" rel="noreferrer" ><img src={require(`../../assets/${post.image}.png`).default} alt='post' class='work-img'/></a>
+              <h2><a href={post.url} target="_blank" rel="noreferrer">{post.title}</a></h2>
               <h3>{post.source}</h3>
               <h4 class='justify'> <span class='quotes'>"</span>{post.description}<span class='quotes'>"</span></h4>
             </div>
