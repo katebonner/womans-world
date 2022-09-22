@@ -1,7 +1,8 @@
 import React from 'react';
-import Auth from '../utils/auth';
-import Veggie from '../components/foodContent/Veggie';
-import Popular from '../components/foodContent/Popular'
+import Auth from '../../utils/auth';
+import Veggie from './foodContent/Veggie';
+import Popular from './foodContent/Popular';
+// import Category from './foodContent/Category'
 
 const Food = () => {
 
@@ -15,6 +16,7 @@ const Food = () => {
             <h1 class='text'> logged in and viewing food content</h1>
           </div>
         )}
+        {/* <Category /> */}
         <Veggie />
         <Popular />
         {!loggedIn && (
