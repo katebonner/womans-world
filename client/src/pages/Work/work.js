@@ -10,14 +10,14 @@ const Work = () => {
   const posts = [
     { 
         title: 'The Key Things to Know Before Switching Careers into Tech',
-        image: 'image1',
+        image: 'image4',
         description: 'Imposter syndrome is real. Be aware of the inner critical thoughts that cause you to doubt your abilities and potential. Make a list of all of your accomplishments within the last year or two. Create a brag list of all the things you are proud of within your career. Re-read it as many times as you need to whenever you start to question yourself. Your brag list will serve as real, actual evidence of what you can do and have done.',
         url:'https://girlboss.com/blogs/read/career-change-tech-what-to-know',
         source: 'girlboss',
     },
     { 
       title:'3 Strategies for Sparking an Innovative Idea',
-      image: 'image1',
+      image: 'image3',
       description: "You see, true innovation is simply adding value somewhere where it didn't exist before. If you have a product that meets a unique need, however mundane, it is innovative in its own way. And it's innovative to a certain set of people. Therein lies the key, it's about the people!",
       url: 'https://sherocommerce.com/3-strategies-for-sparking-an-innovative-idea/',
       source:'shero',
@@ -31,7 +31,7 @@ const Work = () => {
     },
     { 
       title: 'The Career Lessons From Anna Wintour',
-      image: 'image1',
+      image: 'image2',
       description: "Everyone should be sacked at least once in their career, because 'perfection' doesn't exist. It's important to have setbacks, because that is the reality of life",
       url:'https://arte8lusso.net/fashion/annawintour/',
       source:'fortune',
@@ -58,8 +58,8 @@ const Work = () => {
           <div class='work-container'>
             {posts.map((post)=> (
               <div class='post-container'>
-              <img src={require(`../../assets/${post.image}.png`).default} alt='post' class='work-img'/>
-              <h2>{post.title}</h2>
+              <a href={post.url} target="_blank" ><img src={require(`../../assets/${post.image}.png`).default} alt='post' class='work-img'/></a>
+              <h2><a href={post.url} target="_blank">{post.title}</a></h2>
               <h3>{post.source}</h3>
               <h4 class='justify'> <span class='quotes'>"</span>{post.description}<span class='quotes'>"</span></h4>
             </div>
