@@ -1,5 +1,5 @@
-.portfolio{
-    background-image:linear-gradient(180deg,#ffe0b2,#ffdeac);
+.physical{
+    background-image:linear-gradient(180deg,white, rgba(237, 246, 251, 0.878));
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -11,7 +11,7 @@
 
     h1{
         font-size: 50px;
-
+        color: rgb(124, 162, 252);
     }
 
     ul{
@@ -19,6 +19,7 @@
         padding: 0;
         list-style: none;
         display: flex;
+        color: rgb(124, 162, 252);
 
         li{
             font-size: 15px;
@@ -45,12 +46,13 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #ffcc80;
+            color: rgb(124, 162, 252);
             position: relative;
 
             h3{
                 position: absolute;
                 font-size: 20px;
+                color: rgb(124, 162, 252);
             }
 
             img{
@@ -61,7 +63,7 @@
             }
 
             &:hover{
-                background-color: linen;
+                background-color: #e6eeee;
                 img{
                     opacity: 0.05;
                     z-index: 0;
